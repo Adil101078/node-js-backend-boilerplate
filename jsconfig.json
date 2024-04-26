@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@core/*": ["src/core/*"],
+        "@middlewares/*": ["src/middlewares/*"],
+        "@helpers/*": ["src/helpers/*"],
+        "@models/*": ["src/models/*"],
+        "@modules/*": ["src/modules/*"],
+        "@src/*": ["src/*"]
+      }
+    },
+    "include": ["src/**/*"]
+  }
+  

@@ -1,0 +1,65 @@
+{
+  "name": "iot-backend",
+  "version": "1.0.0",
+  "description": "Manage IOT Devices",
+  "main": "server.js",
+  "engines": {
+    "node": ">=15"
+  },
+  "scripts": {
+    "postinstall": "npm run prepare",
+    "start": "babel-node -r module-alias/register --presets @babel/preset-env ./src/server.js",
+    "dev": "nodemon -r module-alias/register ./src/server.js --exec babel-node --presets @babel/preset-env",
+    "prepare": "husky install"
+  },
+  "author": "Md Adil",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.563.0",
+    "@aws-sdk/client-sns": "^3.556.0",
+    "@babel/cli": "^7.24.1",
+    "@babel/eslint-parser": "^7.24.1",
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^7.1.0",
+    "joi": "^17.6.0",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "module-alias": "^2.2.3",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "mustache": "^4.2.0",
+    "pretty-quick": "^3.1.3",
+    "qs": "^6.11.0",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-security": "^1.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "_moduleAliases": {
+    "@core": "src/core",
+    "@middlewares": "src/middlewares",
+    "@helpers": "src/helpers",
+    "@models": "src/models",
+    "@modules": "src/modules",
+    "@src": "src"
+  }
+}
